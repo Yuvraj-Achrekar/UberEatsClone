@@ -1,6 +1,35 @@
 import React from "react";
 import { Image, ScrollView, Text, View } from "react-native";
 
+function Categories(props) {
+	return (
+		<View
+			style={{
+				marginTop: 5,
+				backgroundColor: "white",
+				paddingVertical: 10,
+				paddingLeft: 20,
+			}}>
+			<ScrollView horizontal showsHorizontalScrollIndicator={false}>
+				{items.map((items, index) => (
+					<View key={index} style={{ alignItems: "center", marginRight: 30 }}>
+						<Image
+							source={items.Image}
+							style={{
+								width: 50,
+								height: 40,
+								resizeMode: "contain",
+							}}
+						/>
+						<Text style={{ fontSize: 13, fontWeight: "900" }}>
+							{items.Text}
+						</Text>
+					</View>
+				))}
+			</ScrollView>
+		</View>
+	);
+}
 const items = [
 	{
 		Image: require("../assets/images/shopping-bag.png"),
@@ -31,34 +60,5 @@ const items = [
 		Text: "Desserts",
 	},
 ];
-function Categories(props) {
-	return (
-		<View
-			style={{
-				marginTop: 5,
-				backgroundColor: "white",
-				paddingVertical: 10,
-				paddingLeft: 20,
-			}}>
-			<ScrollView horizontal showsHorizontalScrollIndicator={false}>
-				{items.map((items, index) => (
-					<View key={index} style={{ alignItems: "center", marginRight: 30 }}>
-						<Image
-							source={items.Image}
-							style={{
-								width: 50,
-								height: 40,
-								resizeMode: "contain",
-							}}
-						/>
-						<Text style={{ fontSize: 13, fontWeight: "900" }}>
-							{items.Text}
-						</Text>
-					</View>
-				))}
-			</ScrollView>
-		</View>
-	);
-}
 
 export default Categories;
