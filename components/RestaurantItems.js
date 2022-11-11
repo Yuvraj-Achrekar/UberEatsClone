@@ -12,10 +12,10 @@ function RestaurantItems(props) {
 						backgroundColor: "white",
 						marginTop: 10,
 						padding: 15,
-						borderRadius: 20,
-						marginBottom: 30,
+						// borderRadius: 20,
+						// marginBottom: 30,
 					}}>
-					<RestaurantImage Image={restaurant.Image} />
+					<RestaurantImage Image={restaurant.image_url} />
 					<RestaurantInfo name={restaurant.name} rating={restaurant.rating} />
 				</View>
 			))}
@@ -66,7 +66,7 @@ const RestaurantInfo = (props) => (
 export const localRestaurant = [
 	{
 		name: "Hichki",
-		Image:
+		image_url:
 			"https://images.unsplash.com/photo-1552566626-52f8b828add9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8cmVzdGF1cmFudHxlbnwwfHwwfHw%3D&w=1000&q=80",
 		Categories: ["Cafe", "Bar"],
 		price: "$$",
@@ -75,7 +75,7 @@ export const localRestaurant = [
 	},
 	{
 		name: "Penensula",
-		Image:
+		image_url:
 			"https://images.pexels.com/photos/941861/pexels-photo-941861.jpeg?cs=srgb&dl=pexels-chan-walrus-941861.jpg&fm=jpg",
 		Categories: ["Cafe", "Bar"],
 		price: "$$",
@@ -84,7 +84,7 @@ export const localRestaurant = [
 	},
 	{
 		name: "Hichki",
-		Image:
+		image_url:
 			"https://t3.ftcdn.net/jpg/03/24/73/92/360_F_324739203_keeq8udvv0P2h1MLYJ0GLSlTBagoXS48.jpg",
 		Categories: ["Cafe", "Bar"],
 		price: "$$",
@@ -93,7 +93,7 @@ export const localRestaurant = [
 	},
 	{
 		name: "Hichki",
-		Image:
+		image_url:
 			"https://media.istockphoto.com/id/1018141890/photo/two-empty-wine-glasses-sitting-in-a-restaurant-on-a-warm-sunny-afternoon.jpg?s=612x612&w=0&k=20&c=OccJv1oKWSTDqJ6Irw7iW1NEbL0muU2ylqP3EOhOyEg=",
 		Categories: ["Cafe", "Bar"],
 		price: "$$",
